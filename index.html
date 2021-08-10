@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Dynamic Progress Bar</title>
+  </head>
+  <body>
+    <h1>Progress Bar</h1>
+    <div class="ProgressBar" style="--width: 8" Dlabel="Downloading..."></div>
+    <script type="text/javascript">
+      const progressBar = document.getElementsByClassName('ProgressBar')[0]
+setInterval(() => {
+  const computedStyle = getComputedStyle(progressBar)
+  const width = parseFloat(computedStyle.getPropertyValue('--width')) || 0
+  progressBar.style.setProperty('--width', width + .1)
+}, 5)
+
+    </script>
+  </body>
+</html>
