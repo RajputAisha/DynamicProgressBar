@@ -1,0 +1,1 @@
+This progress Bar contains HTML, JavaScript and CSS
